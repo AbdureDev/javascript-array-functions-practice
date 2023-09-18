@@ -31,10 +31,20 @@ const characters = [
 
 //***MAP***
 //1. Get array of all names
+const names = characters.map((char) => char.name );
+console.log(names);
 //2. Get array of all heights
+const heights = characters.map((char) => char.height );
+console.log(heights);
 //3. Get array of objects with just name and height properties
+const special_arr = characters.map((char) => ({
+    name: char.name, 
+    height: char.height,
+}));
+console.log(special_arr);
 //4. Get array of all first names
-
+const firstNames = characters.map((char) => char.name.split(" ")[0]);
+console.log(firstNames);
 //***REDUCE***
 //1. Get total mass of all characters
 //2. Get total height of all characters
