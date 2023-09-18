@@ -71,11 +71,22 @@ const numOfCharacters = characters.reduce((acl,cur) => {
     return acl + cur.name.length;
 }, 0)
 console.log(numOfCharacters);
+
+
 //***FILTER***
 //1. Get characters with mass greater than 100
+const massGreaterHundred = characters.filter(char => (char.mass >= 100));
+console.log(massGreaterHundred);
 //2. Get characters with height less than 200
+const heightLessThanTowHundreds = characters.filter(char => (char.height <=200))
+console.log(heightLessThanTowHundreds);
 //3. Get all male characters
+const maleCharacters = characters.filter(char => (char.gender ==="male"));
+console.log(maleCharacters);
 //4. Get all female characters
+const femaleCharacters = characters.filter(char => (char.gender ==="female"));
+console.log(femaleCharacters);
+
 
 //***SORT***
 //1. Sort by mass
