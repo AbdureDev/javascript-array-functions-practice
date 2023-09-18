@@ -111,13 +111,29 @@ console.log(byGender);
 
 //***EVERY***
 //1. Does every character have blue eyes?
+const allBlueEyes = characters.every(char => char.eye_color==="blue");
+console.log(allBlueEyes);
 //2. Does every character have mass more than 40?
+const allMassMoreThanFourty = characters.every(char => char.mass > 40);
+console.log(allMassMoreThanFourty);
 //3. Is every character shorter than 200?
+const allShorterThanTowHundreds = characters.every(char => char.height < 200);
+console.log(allShorterThanTowHundreds);
 //4. Is every character male?
-
+const allMales = characters.every(char => char.gender ==="male");
+console.log(allMales);
+console.log("\n\n");
 //***SOME***
 //1. Is there at least one male character?
+const oneMale = characters.some(char => char.gender==="male");
+console.log(oneMale);
 //2. Is there at least one character with blue eyes?
+const oneBlueEye = characters.some(char => char.eye_color==="blue")
+console.log(oneBlueEye);
 //3. Is there at least one character taller than 210?
+const taller = characters.some(char => char.height > 210);
+console.log(taller);
 //4. Is there at least one character that has mass less than 50?
+const less = characters.some((char) => char.mass<50);
+console.log(less);
 
