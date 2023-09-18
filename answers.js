@@ -45,12 +45,32 @@ console.log(special_arr);
 //4. Get array of all first names
 const firstNames = characters.map((char) => char.name.split(" ")[0]);
 console.log(firstNames);
+
+
 //***REDUCE***
 //1. Get total mass of all characters
+const allMass = (characters.reduce((acl,cur) => ( acl+cur.mass) ,0))
+console.log(allMass);
 //2. Get total height of all characters
+const allHeight = (characters.reduce((acl,cur) => (acl+cur.height), 0));
+console.log(allHeight);
 //3. Get total number of characters by eye color
+const characterByEyeColor = characters.reduce((acl, cur) => {
+    const color = cur.eye_color;
+    if (acl[color]) {
+        acl[color]++;
+    }
+    else{
+        acl[color] = 1;
+    } 
+    return acl;
+}, {});
+console.log(characterByEyeColor);
 //4. Get total number of characters in all the character names
-
+const numOfCharacters = characters.reduce((acl,cur) => {
+    return acl + cur.name.length;
+}, 0)
+console.log(numOfCharacters);
 //***FILTER***
 //1. Get characters with mass greater than 100
 //2. Get characters with height less than 200
